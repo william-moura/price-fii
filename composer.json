@@ -1,0 +1,23 @@
+{
+    "name": "william-moura/price-fii",
+    "description": "get last price fundos de investimentos imobiliários.",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^11.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "WilliamMoura\\PriceFii\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "William Moura",
+            "email": "williammoura908@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
