@@ -17,6 +17,7 @@ abstract class AbstractProvider implements ProviderInterface
     public function __construct()
     {
         $this->client = new Client();
+        $this->model = new Fii();
     }
 
     public function getName(): string
@@ -38,4 +39,9 @@ abstract class AbstractProvider implements ProviderInterface
     abstract function getFii(string $fiiCode): Fii;
 
     abstract public function getFiiPrice(string $fiiCode): float;
+
+    protected function parceFloat(string $value): float
+    {
+        return floatval(str_replace(',', '.', $value));
+    }
 }

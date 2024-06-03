@@ -11,11 +11,6 @@ class FiisProvider extends AbstractProvider implements ProviderInterface
 
     protected string $url = 'https://fiis.com.br/';
 
-    private function parceFloat(string $value): float
-    {
-        return floatval(str_replace(',', '.', $value));
-    }
-
     public function getFii(string $fiiCode): Fii
     {
         return new $this->model($fiiCode, $this->getFiiPrice($fiiCode));
